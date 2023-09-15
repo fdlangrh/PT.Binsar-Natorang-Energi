@@ -4,3 +4,6 @@ function alert(){
 function alert(){
     alert("fadil ganteng")
 }
+function alert(){
+    alert("nyoba")
+}
