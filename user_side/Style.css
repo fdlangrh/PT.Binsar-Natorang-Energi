@@ -1,0 +1,23 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+.btn{
+    color: white;
+    background-color: #3C6255;
+    border-radius: 20px;
+}
+.navbar{
+    font-weight: bolder;
+}
+/* footer{
+    background-color: #D9D9D9;
+} */
+h2{
+    font-weight: bolder;
+}
+
+container{
+    background-color: #D9D9D9;
+}
