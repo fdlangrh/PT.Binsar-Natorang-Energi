@@ -11,9 +11,6 @@
 .navbar{
     font-weight: bolder;
 }
-/* footer{
-    background-color: #D9D9D9;
-} */
 h2{
     font-weight: bolder;
 }
@@ -22,17 +19,34 @@ h4{
     font-weight: bolder;
 }
 
-p{
-    direction: ltr;
-    unicode-bidi: bidi-override;
-    }
-
-h6{
-        direction: ltr;
-        unicode-bidi: bidi-override;
-        }
-
-        h4{
-    direction: ltr;
-    unicode-bidi: bidi-override;
-    }
+.center {
+    display: block;
+    margin-top: 70px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height:483.5px;
+    width: 95%;
+}
+.garis{
+    size: 20px;
+    width: 200px;
+    border-width: 6px;
+    border-radius: 15px;
+    background-color: #3C6255;
+    color: #3C6255;
+}
+.pln{
+   margin-top: 0;
+}
+.img-bot{
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.img-top{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
