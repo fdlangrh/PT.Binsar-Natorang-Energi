@@ -22,6 +22,17 @@ h4{
     font-weight: bolder;
 }
 
-hr{
-    border-style: solid;
-}
+p{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    }
+
+h6{
+        direction: ltr;
+        unicode-bidi: bidi-override;
+        }
+
+        h4{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    }
