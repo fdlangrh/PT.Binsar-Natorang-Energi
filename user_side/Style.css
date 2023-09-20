@@ -36,3 +36,79 @@ h6{
     direction: ltr;
     unicode-bidi: bidi-override;
     }
+.img-1{
+    width: 847.021px;
+    height: 616.817px;
+    transform: rotate(0.492deg);
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-left: 45%;
+}   
+.hsn{
+    width: 660px;
+    height: 394px;
+    border-radius: 35%;
+}
+.garis{
+    size: 20px;
+    width: 200px;
+    border-width: 6px;
+    border-radius: 15px;
+    background-color: #3C6255;
+    color: #3C6255;
+    
+}
+.card-img-center{
+    width: 40px;
+    margin-right: 20%;
+}
+.card3{
+    width: 40px;
+    height: 40px;
+    margin-right: 20%;
+}
+.card-text{
+    width: 40px;
+}
+.card6{
+    width: 40px;
+    margin-left: 60%;
+}
+.card-img-center1{
+    width: 40px;
+    margin-left: 60%;
+}
+.card-img-center2{
+    width: 40px;
+    margin-right: 20%;
+}
+.card8{
+    width: 40px;
+    height: 40px;
+    margin-right: 20%;
+}
+.card9{
+    width: 40px;
+    margin-left: 60%;
+}
+.card-img-center3{
+    width: 40px;
+    margin-left: 9%;
+}
+.card-img-center4{
+    width: 40px;
+    margin-right: 20%;
+}
+.card12{
+    width: 40px;
+    height: 40px;
+    margin-right: 20%;
+}
+.card14{
+    width: 40px;
+    margin-left: 60%;
+}
+.card-img-center5{
+    width: 40px;
+    margin-left: 60%;
+}
