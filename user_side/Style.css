@@ -1,3 +1,4 @@
+
 *{
     font-family: 'Poppins', sans-serif;
     background-color: white;
@@ -50,3 +51,17 @@ h4{
     margin-left: auto;
     margin-right: auto;
 }
+p{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    }
+
+h6{
+        direction: ltr;
+        unicode-bidi: bidi-override;
+        }
+
+        h4{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    }
