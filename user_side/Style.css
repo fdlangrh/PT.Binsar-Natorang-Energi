@@ -19,6 +19,9 @@ h2{
 h4{
     font-weight: bolder;
 }
+.container{
+    margin-top: 50px;
+}
 
 .center {
     display: block;
@@ -74,9 +77,9 @@ h6{
     margin-left: 45%;
 }   
 .hsn{
-    width: 660px;
-    height: 394px;
-    border-radius: 35%;
+    width: 600px;
+    height: 450px;
+    border-radius: 40%;
 }
 .garis{
     size: 20px;
@@ -143,4 +146,12 @@ h6{
 }
 .col-7{
     margin-left: 16%;
+}
+.div-2{
+    margin-top: 50px;
+}
+.float-end{
+    border-radius: 50%;
+    width: 700px;
+    height: 450px;
 }
