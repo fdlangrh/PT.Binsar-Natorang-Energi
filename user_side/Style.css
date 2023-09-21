@@ -142,18 +142,6 @@ h6{
     margin-left: 60%;
 }
 
-head {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 316.50px;
-    border-top-right-radius: 316.50px;
-    border-bottom-right-radius: 316.50px;
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 316.50px;
-    border-top-right-radius: 316.50px;
-    border-bottom-right-radius: 316.50px;
+card {
+    background-color: #3C6255;
 }
