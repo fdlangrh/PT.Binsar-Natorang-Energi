@@ -99,8 +99,9 @@ h6{
     height: 450px;
 }
 .card-img-top{
-    width: 210px;
-    height: 210px;
-   margin: 30px;
-   background-color: gray;
+    width: 310px;
+    height: 310px;
+    color: gainsboro;
+    margin-top: 40px;
+    background-color: gray;
 }
