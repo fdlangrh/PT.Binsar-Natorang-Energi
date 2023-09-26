@@ -2,18 +2,17 @@
 .tengah {
   width: 440px;
   height: 550px;
-  position: absolute;
-  left: 382px;
-  top: 90px;
+  position: relative;
+  top: 90px;  
   align-items: center;
 }
-.kiri {
+.kiri{
   border-radius: 0px 0px 0px 190px;
   width: 350px;
   height: 550px;
-  position: absolute;
-  left: 20px;
+  position: relative;
   top: 90px;
+  margin-left: 70px;
   align-items: center;
 }
 
@@ -21,8 +20,7 @@
   border-radius: 0px 0px 184px 0px;
   width: 368px;
   height: 550px;
-  position: absolute;
-  left: 836px;
+  position: relative;
   top: 90px;
   align-items: center;
 
@@ -55,7 +53,7 @@
   position: relative;
   width: 280px;
   left: 10px;
-  top: 0px;
+  top: 90px;
   height: 67px;
 }
 .line-29 {
@@ -63,6 +61,7 @@
   border-color: #3c6255;
   border-width: 7px 0 0 0;
   width: 244.33px;
+  top: 80px;
   height: 0px;
   position: relative;
   transform-origin: 0 0;
@@ -148,11 +147,11 @@
   left: 708px;
   font-family: "Amiri Quran Colored-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
   font-size: 20px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  background-color :#61876e;
 }
 
 .our-activites .overlap-2 {
@@ -180,7 +179,7 @@
   left: 519px;
   transform: rotate(179.91deg);
   object-fit: cover;
-  color:black;
+  background-color: black;
 }
 
 .our-activites .frame-wrapper {
@@ -210,11 +209,11 @@
   transform: rotate(179.91deg);
   font-family: "Amiri Quran Colored-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
   font-size: 20px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+  background-color: #61876e;
 }
 
 .our-activites .asset-2 {
