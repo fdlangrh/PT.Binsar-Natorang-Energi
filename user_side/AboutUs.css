@@ -5,6 +5,7 @@
   position: absolute;
   left: 382px;
   top: 90px;
+  align-items: center;
 }
 .kiri {
   border-radius: 0px 0px 0px 190px;
@@ -13,7 +14,9 @@
   position: absolute;
   left: 20px;
   top: 90px;
+  align-items: center;
 }
+
 .kanan {
   border-radius: 0px 0px 184px 0px;
   width: 368px;
@@ -21,6 +24,8 @@
   position: absolute;
   left: 836px;
   top: 90px;
+  align-items: center;
+
 }
 
 .desktop-1 {
@@ -42,42 +47,7 @@
   left: 650px;
   top: 117px;
 }
-.pt-binsar-natorang-energi-is-a-limited-entity-engaged-in-the-electric-power-industry-through-hydro-power-plants-pt-binsar-natorang-energi-was-established-on-april-25-2008-in-accordance-with-the-decree-of-the-minister-of-law-and-human-rights-number-ahu-21249-ah-01-01-tahun-2008-pt-binsar-natorang-energi-has-developed-a-hydroelectric-power-plant-in-north-sumatra-indonesia-supported-by-lg-international-and-pt-titan-multi-power-by-utilizing-the-water-resources-of-the-kualu-river-pt-binsar-natorang-energi-participates-in-the-water-resources-development-and-conservation-program-to-increase-theutilization-of-the-water-resources-function-for-the-provision-of-national-electrical-energy-the-construction-of-the-hasang-hydropower-plant-pt-binsar-natorang-energi-follows-the-applicable-laws-and-regulations-namely-law-no-32-of-2009-concerning-environmental-protection-and-management-in-terms-of-providing-information-related-to-environmental-protection-and-management-in-a-correct-accurate-open-and-timely-manner-maintaining-the-sustainability-of-environmental-functions-and-complying-with-provisions-on-environmental-quality-standards {
-  color: #000000;
-  text-align: left;
-  font: 400 18px "Amiri Quran Colored", sans-serif;
-  position: absolute;
-  left: 67px;
-  top: 129px;
-  width: 550px;
-  height: 500px;
-}
-.group-92 {
-  width: 346px;
-  height: 81.01px;
-  position: static;
-}
-.our-background {
-  color: #000000;
-  text-align: left;
-  font: 600 40px "Poppins", sans-serif;
-  position: absolute;
-  left: 67px;
-  top: 36px;
-  width: 346px;
-}
-.line-28 {
-  border-style: solid;
-  border-color: #3c6255;
-  border-width: 5px 0 0 0;
-  width: 244px;
-  height: 0px;
-  position: absolute;
-  left: 69px;
-  top: 100px;
-  transform-origin: 0 0;
-  transform: rotate(0.237deg) scale(1, 1);
-}
+
 .our-activities {
   color: #000000;
   text-align: left;
