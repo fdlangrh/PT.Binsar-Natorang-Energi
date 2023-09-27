@@ -58,20 +58,18 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-
-p {
-    direction: ltr;
-    unicode-bidi: bidi-override;
+.card-img-top{
+    height: 200px;
+    width: 500px;
 }
 
-h6 {
-    direction: ltr;
-    unicode-bidi: bidi-override;
-}
-
-h4 {
-    direction: ltr;
-    unicode-bidi: bidi-override;
+.img-hd{
+   border-radius: 10%;
+    width: 540px;
+    height: 450px;
+    position: relative;
+    top: 0px;
+    right: -2px;
 }
 
 .img-1 {
@@ -114,7 +112,7 @@ h4 {
 
 .card-img-top {
     width: 310px;
-    height: 310px;
+    height: 210px;
     color: gainsboro;
     margin-top: 40px;
     border-radius: 20px;
@@ -122,86 +120,95 @@ h4 {
 }
 
 .image-head {
-    margin-top: 70px;
+    margin-top: 90px;
     width: 1200px;
     height: 600px;
-    border-bottom-right-radius: 200px;
-    border-top-left-radius: 200px;
     display: block;
-    align-items: center;
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img1 {
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
+.img2 {
+    margin-top: 20px;
+    margin-right: 20px;
 
 }
 
-.container {
-    position: relative;
-}
-.col-3{
-    position: relative;
+.img3 {
+    margin-right: 100px;
 }
 
-.overlay {
+.img-mid {
+    border-radius: 200px;
+}
+
+.img4 {
+    margin-left: 300px;
+}
+
+.img5 {
+    margin-left: 20px;
+}
+
+.img6 {
+    margin-left: 300px;
+}
+.content-box{
+    width: 50%;
+    height: 50%;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 600px;
+}
+.content{
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50px;
+}
+
+  
+  #earth {
+      width: 500px;
+      height: 500px;
+      background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+      border-radius: 50%;
+      background-size: 500px 500px;
+      animation-name: rotate;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      -webkit-animation-name: rotate;
+      -webkit-animation-duration: 17s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+  }
+  
+  @keyframes rotate {
+      from { background-position: 0px 0px; }
+      to { background-position: 500px 0px; }
+  }
+  @-webkit-keyframes rotate {
+      from { background-position: 0px 0px; }
+      to { background-position: 500px 0px; }
+  }
+  
+
+.head-top{
+   
+    background-size: 500px 700px;
+    
+}
+.img-hd-tp{
     width: 1200px;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #4b4b4b93;
-    border-bottom-right-radius: 200px;
-    border-top-left-radius: 200px;
-    align-items: center;
-    margin-left: 11px;
-
-}
-.overlay-sub {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 420px;
-    width: 420px;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #4b4b4b93;
-    border-bottom-right-radius: 100px;
-    align-items: center;
-    margin-left: 11px;
-
-}
-
-.container:hover .overlay {
-    opacity: 1;
-}
-.col-3:hover .overlay-sub{
-    opacity: 1;
-}
-
-.text {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #4b4b4b00;
-}
-.text-sub {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #4b4b4b00;
+    height: 600px;
 }

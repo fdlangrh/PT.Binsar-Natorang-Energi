@@ -1,4 +1,6 @@
+*{
 
+}
 .tengah {
   width: 440px;
   height: 550px;
@@ -152,6 +154,7 @@
   letter-spacing: 0;
   line-height: normal;
   background-color :#61876e;
+  color: white;
 }
 
 .our-activites .overlap-2 {
@@ -214,6 +217,7 @@
   letter-spacing: 0;
   line-height: normal;
   background-color: #61876e;
+  color: white;
 }
 
 .our-activites .asset-2 {
