@@ -20,7 +20,7 @@ h2 {
 
 
 .container {
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 .center {
@@ -58,13 +58,14 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-.card-img-top{
+
+.card-img-top {
     height: 200px;
     width: 500px;
 }
 
-.img-hd{
-   border-radius: 10%;
+.img-hd {
+    border-radius: 10%;
     width: 540px;
     height: 450px;
     position: relative;
@@ -112,7 +113,7 @@ h2 {
 
 .card-img-top {
     width: 310px;
-    height: 210px;
+    height: 310px;
     color: gainsboro;
     margin-top: 40px;
     border-radius: 20px;
@@ -158,61 +159,79 @@ h2 {
 .img6 {
     margin-left: 300px;
 }
-.content-box{
+
+.content-box {
     width: 50%;
     height: 50%;
     position: absolute;
 }
-.content{
+
+.content {
     align-items: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.left{
+
+.left {
     width: 50%;
 }
-.right{
+
+.right {
     width: 50px;
 }
 
-  
-  #earth {
-      width: 500px;
-      height: 500px;
-      background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
-      border-radius: 50%;
-      background-size: 500px 500px;
-      animation-name: rotate;
-      animation-duration: 15s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      -webkit-animation-name: rotate;
-      -webkit-animation-duration: 17s;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-  }
-  
-  @keyframes rotate {
-      from { background-position: 0px 0px; }
-      to { background-position: 500px 0px; }
-  }
-  @-webkit-keyframes rotate {
-      from { background-position: 0px 0px; }
-      to { background-position: 500px 0px; }
-  }
-  
 
-.head-top{
-   
-    background-size: 500px 700px;
-    
+#earth {
+    width: 500px;
+    height: 500px;
+    background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+    border-radius: 50%;
+    background-size: 500px 500px;
+    animation-name: rotate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 17s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
 }
-.img-hd-tp{
+
+@keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 500px 0px;
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 500px 0px;
+    }
+}
+
+
+.head-top {
+
+    background-size: 500px 700px;
+
+}
+
+.img-hd-tp {
     width: 1200px;
     height: 600px;
 }
-iframe{
-    width: 100%;
+
+iframe {
+    width: 500px;
     height: 500px;
+    border-radius: 30px;
 }
