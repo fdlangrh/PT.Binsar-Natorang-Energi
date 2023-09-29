@@ -1,6 +1,6 @@
 * {
     font-family: 'Poppins', sans-serif;
-    background-color: white;
+   
 }
 
 .btn {
@@ -235,3 +235,117 @@ iframe {
     height: 500px;
     border-radius: 30px;
 }
+.ellipse-1 {
+    background: #eae7b1;
+    border-radius: 50%;
+    width: 650px;
+    height: 450px;
+    position: absolute;
+    left: 704px;
+    top: -131px;
+  }
+  .ellipse-2 {
+    border-radius: 50%;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 718.83px;
+    top: -98.61px;
+    transform-origin: 0 0;
+  }
+.home-admin-side {
+    border-radius: 20px;
+    width: 1440px;
+    height: 564px;
+    position: relative;
+    overflow: hidden;
+  }
+  .rectangle-77 {
+    background: #ffffff;
+    width: 1440px;
+    height: 3366px;
+    position: absolute;
+    left: 32px;
+    top: -104px;
+  }
+  .pt-binsar-natorang-energi {
+    text-align: left;
+    font: 600 40px "Poppins", sans-serif;
+    position: absolute;
+    left: 143px;
+    top: 110px;
+    width: 474px;
+    height: 102px;
+  }
+  .pt-binsar-natorang-energi-span {
+    color: #000000;
+    font: 600 40px "Poppins", sans-serif;
+  }
+  .pt-binsar-natorang-energi-span2 {
+    color: #b4cd35;
+    font: 600 40px "Poppins", sans-serif;
+  }
+  .pt-binsar-natorang-energi-span3 {
+    color: #000000;
+    font: 600 40px "Poppins", sans-serif;
+  }
+  .text {
+    color: #000000;
+    text-align: left;
+    font: 400 20px "Poppins", sans-serif;
+    position: absolute;
+    left: 147px;
+    top: 228px;
+    width: 516px;
+    height: 121px;
+  }
+  .ellipse-1 {
+    
+    border-radius: 50%;
+    width: 920px;
+    height: 695px;
+    position: absolute;
+    left: 704px;
+    top: -131px;
+  }
+  .ellipse-2 {
+    border-radius: 50%;
+    width: 847.02px;
+    height: 616.82px;
+    position: absolute;
+    left: 718.83px;
+    top: -98.61px;
+    transform-origin: 0 0;
+  
+  }
+  .group-2 {
+    position: absolute;
+    inset: 0;
+  }
+  .rectangle-2 {
+    background: linear-gradient(
+      180deg,
+      rgba(60, 98, 85, 1) 0%,
+      rgba(60, 98, 85, 0) 100%
+    );
+    border-radius: 20px;
+    width: 137px;
+    height: 41px;
+    position: absolute;
+    left: 160px;
+    top: 336px;
+  }
+  .about-more {
+    color: #ffffff;
+    text-align: center;
+    font: 400 14px "Poppins", sans-serif;
+    position: absolute;
+    left: 182px;
+    top: 342px;
+    width: 94px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
