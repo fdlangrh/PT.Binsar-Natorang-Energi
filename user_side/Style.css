@@ -383,13 +383,13 @@ iframe {
     left: 0;
     right: 0;
     height: 100px;
-    width: 610px;
+    width: 810px;
     opacity: 0;
     transition: .5s ease;
     background-color: #3C6255;
     align-items: center;
-    margin-left: 95px;
-    margin-top: 250px;
+    margin-left: 300px;
+    margin-top: 400px;
     border-radius: 20px;
 
 }
