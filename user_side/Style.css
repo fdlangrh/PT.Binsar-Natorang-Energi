@@ -1,6 +1,6 @@
 * {
     font-family: 'Poppins', sans-serif;
-   
+
 }
 
 .btn {
@@ -60,10 +60,6 @@ h2 {
     margin-right: auto;
 }
 
-.card-img-top {
-    height: 200px;
-    width: 500px;
-}
 
 .img-hd {
     border-radius: 10%;
@@ -112,14 +108,7 @@ h2 {
     height: 450px;
 }
 
-.card-img-top {
-    width: 310px;
-    height: 310px;
-    color: gainsboro;
-    margin-top: 40px;
-    border-radius: 20px;
 
-}
 
 .image-head {
     margin-top: 90px;
@@ -236,6 +225,7 @@ iframe {
     height: 500px;
     border-radius: 30px;
 }
+
 .ellipse-1 {
     background: #eae7b1;
     border-radius: 50%;
@@ -244,8 +234,9 @@ iframe {
     position: absolute;
     left: 704px;
     top: -131px;
-  }
-  .ellipse-2 {
+}
+
+.ellipse-2 {
     border-radius: 50%;
     width: 600px;
     height: 400px;
@@ -253,23 +244,26 @@ iframe {
     left: 718.83px;
     top: -98.61px;
     transform-origin: 0 0;
-  }
+}
+
 .home-admin-side {
     border-radius: 20px;
     width: 1440px;
     height: 564px;
     position: relative;
     overflow: hidden;
-  }
-  .rectangle-77 {
+}
+
+.rectangle-77 {
     background: #ffffff;
     width: 1440px;
     height: 3366px;
     position: absolute;
     left: 32px;
     top: -104px;
-  }
-  .pt-binsar-natorang-energi {
+}
+
+.pt-binsar-natorang-energi {
     text-align: left;
     font: 600 40px "Poppins", sans-serif;
     position: absolute;
@@ -277,20 +271,24 @@ iframe {
     top: 110px;
     width: 474px;
     height: 102px;
-  }
-  .pt-binsar-natorang-energi-span {
+}
+
+.pt-binsar-natorang-energi-span {
     color: #000000;
     font: 600 40px "Poppins", sans-serif;
-  }
-  .pt-binsar-natorang-energi-span2 {
+}
+
+.pt-binsar-natorang-energi-span2 {
     color: #b4cd35;
     font: 600 40px "Poppins", sans-serif;
-  }
-  .pt-binsar-natorang-energi-span3 {
+}
+
+.pt-binsar-natorang-energi-span3 {
     color: #000000;
     font: 600 40px "Poppins", sans-serif;
-  }
-  .text {
+}
+
+.text {
     color: #000000;
     text-align: left;
     font: 400 20px "Poppins", sans-serif;
@@ -299,9 +297,10 @@ iframe {
     top: 228px;
     width: 516px;
     height: 121px;
-  }
-  .ellipse-1 {
-    
+}
+
+.ellipse-1 {
+
     border-radius: 50%;
     border-bottom-right-radius: 40%;
     border-top-right-radius: 20%;
@@ -310,8 +309,9 @@ iframe {
     position: absolute;
     left: 704px;
     top: -131px;
-  }
-  .ellipse-2 {
+}
+
+.ellipse-2 {
     border-radius: 50%;
     border-bottom-right-radius: 40%;
     border-top-right-radius: 20%;
@@ -322,26 +322,27 @@ iframe {
     top: -98.61px;
     transform-origin: 0 0;
     margin-right: 50px;
-  
-  }
-  .group-2 {
+
+}
+
+.group-2 {
     position: absolute;
     inset: 0;
-  }
-  .rectangle-2 {
-    background: linear-gradient(
-      100deg,
-      rgba(60, 98, 85, 1) 0%,
-      rgba(60, 98, 85, 0) 100%
-    );
+}
+
+.rectangle-2 {
+    background: linear-gradient(100deg,
+            rgba(60, 98, 85, 1) 0%,
+            rgba(60, 98, 85, 0) 100%);
     border-radius: 20px;
-    
+
     position: absolute;
     left: 160px;
     top: 336px;
     text-align: center;
-  }
-  .about-more {
+}
+
+.about-more {
     color: #ffffff;
     text-align: center;
     font: 400 14px "Poppins", sans-serif;
@@ -353,5 +354,60 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
+}
+
+.card-img-top {
+    width: 610px;
+    height: 310px;
+    color: gainsboro;
+    margin-top: 40px;
+    border-radius: 20px;
+
+}
+
+.swiper {
+    width: 800px;
+    height: 400px;
+}
+.swiper-button-next{
+    color: #3C6255;
+}
+
+.facility{
+    position: relative;
+}
+.ovr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 610px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3C6255;
+    align-items: center;
+    margin-left: 95px;
+    margin-top: 250px;
+    border-radius: 20px;
+
+}
+
+.facility:hover .ovr {
+    opacity: 1;
+}
+
+.capt {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 205px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    background-color: #3C6255;
+}
+
