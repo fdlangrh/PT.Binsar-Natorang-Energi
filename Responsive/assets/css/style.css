@@ -2658,7 +2658,7 @@ iframe {
 }
 
 .swiper-container {
-  width: 100%;
+  width: auto;
   height: 100%;
   margin-left: auto;
   position: relative;
@@ -2767,13 +2767,6 @@ iframe {
     margin-top: 200px;
   }
 }
-
-
-
-
-
-
-
 .act {
   position: relative;
 }
