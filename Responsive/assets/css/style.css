@@ -1912,23 +1912,6 @@ section {
   padding: 40px 0 20px 0;
 }
 
-.header .container h2 {
-  margin-top: 50px;
-}
-
-.header .container img {
-  margin-top: 20px;
-  border-bottom-left-radius: 120px;
-  border-bottom-right-radius: 120px;
-}
-
-.blog .container .row p {
-  font-size: 20px;
-  text-align: justify;
-}
-
-
-
 .blog .entry .entry-title a {
   color: #012970;
   transition: 0.3s;
@@ -2699,6 +2682,98 @@ iframe {
 }
 
 /* about us css */
+
+
+
+.blog .container .row p {
+  font-size: 20px;
+  text-align: justify;
+}
+.header .container .head-abt{
+  width: auto;
+  align-items: center;
+  position: absolute;
+
+}
+.header .container h2{
+  margin-top: 100px;
+}
+
+.header .container .head-abt .row .col-md-auto .img1{
+  margin-top: 25px;
+  width: 370px;
+  height: 300px;
+  position: absolute;
+  
+}
+.header .container .head-abt .row .col-md-auto .img2{
+  margin-top: 170px;
+  width: 370px;
+  height: auto;
+  margin-left: 380px;
+  position: absolute;
+}
+.header .container .head-abt .row .col-md-auto .img3{
+  margin-top: 20px;
+  width: 370px;
+  height: 100%;
+  margin-left: 760px;
+  position: absolute;
+}
+.blog .container{
+  margin-top: 600px;
+}
+@media screen and (max-width: 768px) {
+  .head-abt .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header .container .head-abt .row .col-md-auto .img1{
+    margin-top: 0px;
+    max-width: 120px;
+    height: 300px;
+    position: absolute;
+    
+  }
+  .header .container .head-abt .row .col-md-auto .img2{
+    margin-top: 50px;
+    max-width: 120px;
+    height: auto;
+    margin-left: 125px;
+    position: absolute;
+  }
+  .header .container .head-abt .row .col-md-auto .img3{
+    margin-top: 0px;
+    max-width: 120px;
+    height: 100%;
+    margin-left: 250px;
+    position: absolute;
+  }
+
+  .head-abt .row .col {
+    width: 100%;
+    margin-bottom: 20px; /* Sesuaikan jarak antara gambar-gambar */
+  }
+
+  .head-abt .row .col .img1,
+  .head-abt .row .col .img2,
+  .head-abt .row .col .img3 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .blog .container{
+    margin-top: 200px;
+  }
+}
+
+
+
+
+
+
+
 .act {
   position: relative;
 }
