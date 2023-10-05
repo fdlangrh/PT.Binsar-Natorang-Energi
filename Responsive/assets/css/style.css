@@ -1079,7 +1079,7 @@ section {
   background: rgba(255, 255, 255, 0.75);
 }
 
-.portfolio-details .container .right .row .col {
+.portfolio-details .container .row .col {
   background-color: #3C6255;
   color: white;
   height: 100%;
@@ -1098,11 +1098,13 @@ section {
   text-align: start;
   margin-top: 240px;
   padding-top: 50px;
+  font-size: 20px;
 }
 
 .portfolio-details .container .row .col p {
   text-align: start;
   margin-top: 240px;
+  font-weight: lighter;
   padding-bottom: 70px;
 }
 
@@ -2503,9 +2505,11 @@ iframe {
 
 .index-end .container swiper-container {
   width: 100%;
-  height: 100%;
+  height: 120%;
   position: relative;
   align-items: center;
+  margin: 20px;
+  padding: 40px;
 }
 
 
@@ -2521,8 +2525,10 @@ iframe {
 
 }
 
-.index-end .container swiper-container swiper-slide .swiper-pagination {
-  position: relative;
+.index-end .container swiper-container swiper-slide swiper-pagination {
+  background-color: transparent;
+  text-decoration: none;
+  padding-top: 130px;
 }
 
 .index-end .container swiper-container swiper-slide .card-body {
@@ -2655,15 +2661,15 @@ iframe {
 }
 
 
-.blog .container .row p {
-  font-size: 20px;
+.blog .container .row p{
+  font-size: 21px;
   text-align: justify;
   width: 550px;
 }
 
 .blog .container .row .col-lg-6 img {
   width: 600px;
-  height: 650px;
+  height: 450px;
 }
 
 .header .container .head-abt {
@@ -2677,18 +2683,30 @@ iframe {
   margin-top: 100px;
 }
 
+
+.header .container .head-abt .row .col-md-auto .img1 img{
+  width: 400px;
+  height: 620px;
+}
+.header .container .head-abt .row .col-md-auto .img2 img{
+  width: 400px;
+  height: 620px;
+}
+.header .container .head-abt .row .col-md-auto .img3 img{
+  width: 400px;
+  height: 620px;
+}
 .header .container .head-abt .row .col-md-auto .img1 {
   margin-top: 25px;
   width: 370px;
   height: 300px;
   position: absolute;
-
 }
 
 .header .container .head-abt .row .col-md-auto .img2 {
-  margin-top: 170px;
+  margin-top: 25px;
   width: 370px;
-  height: auto;
+  height: 900px;
   margin-left: 380px;
   position: absolute;
 }
@@ -2700,9 +2718,23 @@ iframe {
   margin-left: 760px;
   position: absolute;
 }
+.about-mid .container h2 {
+ font-weight: bolder;
+color: #3C6255;
+}
+.about-mid .container h2>button{
+  border-radius: 21px;
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  border-color: #314f44;
+  border-style: outset;
+  font-size: 18px;
+  margin-left: 690px;
+} 
 
 .blog .container {
-  margin-top: 600px;
+  margin-top: 650px;
 }
 
 
@@ -2754,6 +2786,7 @@ iframe {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: absolute;
   }
 
   .blog .container .row .col-lg-6 p {
@@ -2762,37 +2795,54 @@ iframe {
     font-size: 20px;
     max-width: 340px;
   }
-
-  .blog .container .row .col-lg-6 img {
-    max-width: 300px;
+  .header .container .head-abt .row .col-md-auto .img1 img{
+    max-width: 100px;
     max-height: 150px;
-    margin-left: 30px;
-
+  
+    position: absolute;
   }
+  
+  .header .container .head-abt .row .col-md-auto .img2 img{
+    
+    max-width: 100px;
+    max-height: 150px;
+    
+    position: absolute;
+  }
+  
+  .header .container .head-abt .row .col-md-auto .img3 img{
+    margin-top: 0px;
+    max-width: 100px;
+    max-height: 150px;
+  
+    position: absolute;
+  }
+  
 
   .header .container .head-abt .row .col-md-auto .img1 {
-    margin-top: 0px;
-    max-width: 120px;
-    height: 300px;
+    margin-top: 0;
+    max-width: 100px;
+    max-height: 150px;
     position: absolute;
-
   }
-
+  
   .header .container .head-abt .row .col-md-auto .img2 {
-    margin-top: 50px;
-    max-width: 120px;
-    height: auto;
-    margin-left: 125px;
+    margin-top: 0px;
+    max-width: 100px;
+    max-height: 150px;
+    margin-left: 105px;
     position: absolute;
   }
-
+  
   .header .container .head-abt .row .col-md-auto .img3 {
     margin-top: 0px;
-    max-width: 120px;
-    height: 100%;
-    margin-left: 250px;
+    max-width: 100px;
+    max-height: 150px;
+   margin-left: 210px;
     position: absolute;
   }
+
+  
 
   .head-abt .row .col {
     width: 100%;
@@ -2846,7 +2896,7 @@ iframe {
 /* Our Partners css */
 
 .our .container img {
-  width: 1200px;
+  width: 1000px;
   align-items: center;
   position: absolute;
   display: block;
@@ -2863,14 +2913,14 @@ iframe {
 .our .container .ovrly .row .col h1 {
   color: white;
   font-size: 30px;
-  left: 500px;
+  left: 400px;
   top: 300px;
   font-weight: bolder;
 }
 
 .our .container .ovrly .row .col p {
   color: white;
-  left: 530px;
+  left: 430px;
   top: 350px;
   font-size: 19x;
   width: 600px;
