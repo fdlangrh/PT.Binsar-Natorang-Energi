@@ -6,6 +6,8 @@ from bson import ObjectId
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
+client=MongoClient('mongodb+srv://fadil123:fadil123@atlascluster.jbkflub.mongodb.net/?retryWrites=true&w=majority')
+db=client.pkl2
 
 
 @app.route('/')
@@ -27,6 +29,7 @@ def our():
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
 
 @app.route('/profile')
 def profile():
@@ -84,7 +87,64 @@ def fasttrans():
 @app.route('/constructive')
 def cons():
     return render_template('constructive.html')
+
+
+
+@app.route('/upload', methods=['GET'])
+def upload():
+   articles = list(db.binsar.find({}, {'_id':False}))
+   return jsonify({'articles': articles})
+  
+
+@app.route('/upload', methods=['POST'])
+def save_data():
+#    sample_data=request.form.get('sample_give')
+#    print(sample_data)
+    title_receive=request.form.get('title_give')
+    content_receive=request.form.get('content_give')
+
+    file = request.files["file_give"]
+    extension = file.filename.split('.')[-1]
+    today = datetime.now()
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+    filename = f'static/post-{mytime}.{extension}'
+    file.save(filename)
+
+    doc = {
+        'file': filename,
+        'title': title_receive,
+        'content': content_receive
+    }
+    db.binsar.insert_one(doc)
+    return jsonify({
+        'msg':'your data has been saved 22!'
+    })
+
     
 
+
+@app.route('/data')
+def data():
+    return render_template('data.html')
+
+@app.route('/add')
+def add():
+    return render_template('add.html')
+
+@app.route('/add',methods=['GET'])
+def submit():
+    act=request.form.get('act')
+    img=request.form.get('img')
+    capt=request.form.get('capt')
+    doc={
+        'act':act,
+        'img':img,
+        'capt':capt,
+    }
+      
+    db.binsar.insert_one(doc)
+    return jsonify({
+        'msg':'your data has been saved!'
+    })
 if __name__=='__main__':
     app.run('0.0.0.0',port=5000, debug=True)

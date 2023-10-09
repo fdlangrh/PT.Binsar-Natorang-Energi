@@ -1,0 +1,187 @@
+/* Home Css */
+.index .container .row .card {
+    width: 230px;
+    height: 250px;
+  }
+  
+  .index .container .row {
+    margin-left: 50px;
+  }
+  
+  .span {
+    color: #000000;
+    font: 600 40px "Poppins", sans-serif;
+  }
+  
+  .span2 {
+    color: #b4cd35;
+    font: 600 40px "Poppins", sans-serif;
+  }
+  
+  .garis {
+    size: 20px;
+    width: 200px;
+    border-width: 6px;
+    border-radius: 15px;
+    background-color: #3C6255;
+    color: #3C6255;
+  }
+  
+  .card-img-top {
+    max-width: 800px;
+    min-width: 350px;
+    max-height: 400px;
+    min-height: 175px;
+    color: gainsboro;
+    margin-top: 40px;
+    border-radius: 20px;
+  
+  }
+  
+  .facility {
+    position: relative;
+  }
+  
+  .ovr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 397px;
+    height: 100px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3C6255;
+    align-items: center;
+    margin-top: 170px;
+  
+  }
+  
+  .facility:hover .ovr {
+    opacity: 1;
+  }
+  
+  .capt {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    position: absolute;
+    top: 50px;
+    width: 397px;
+    text-align: center;
+    left: 199px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #3C6255;
+  }
+  
+  
+  iframe {
+    width: 500px;
+  
+    height: 350px;
+  
+    border-radius: 30px;
+  }
+  
+  .index-end .container swiper-container {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    align-items: center;
+    margin: 20px;
+    padding: 40px;
+  }
+  
+  
+  .index-end .container swiper-container swiper-slide {
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+  
+    padding: 5px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .index-end .container swiper-container swiper-slide swiper-pagination {
+    background-color: transparent;
+    text-decoration: none;
+    padding-top: 130px;
+  }
+  
+  .index-end .container swiper-container swiper-slide .card-body {
+    width: 20rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .index .container .row .card {
+      width: 230px;
+      height: 250px;
+      margin-top: 50px;
+    }
+  
+    .index .container .row {
+      margin-left: 55px;
+  
+    }
+  
+    .facility {
+      position: relative;
+      margin-left: 35px;
+    }
+  
+    .ovr {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      width: 310px;
+      height: 100px;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #3C6255;
+      align-items: center;
+      margin-top: 120px;
+  
+    }
+  
+    .facility:hover .ovr {
+      opacity: 1;
+    }
+  
+    .capt {
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      position: absolute;
+      top: 50px;
+      width: 310px;
+      text-align: center;
+      left: 155px;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background-color: #3C6255;
+    }
+  
+  
+    .features .container .row iframe {
+  
+      max-width: 300px;
+      max-height: 150px;
+      margin-left: 30px;
+      border-radius: 30px;
+  
+    }
+  }
+  
+  
+  

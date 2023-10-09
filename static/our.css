@@ -1,0 +1,94 @@
+/* Our Partners css */
+
+.our .container img {
+    width: 1000px;
+    align-items: center;
+    position: absolute;
+    display: block;
+    margin-left: 50px;
+  }
+  
+  .our .container .ovrly .row .col img {
+    width: 150px;
+    border-radius: 50px;
+    margin-left: 13%;
+    margin-top: 170px;
+  }
+  
+  .our .container .ovrly .row .col h1 {
+    color: white;
+    font-size: 30px;
+    left: 400px;
+    top: 300px;
+    font-weight: bolder;
+  }
+  
+  .our .container .ovrly .row .col p {
+    color: white;
+    left: 430px;
+    top: 350px;
+    font-size: 19x;
+    width: 600px;
+    text-align: justify;
+  }
+  
+  .our .container {
+    margin-top: 20px;
+  }
+  
+  .our-body .container {
+    margin-top: 500px;
+  }
+  
+  .our-body .container .row .col-lg-6 p {
+    text-align: justify;
+    font-size: 19px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .our .container img {
+      width: 350px;
+      align-items: center;
+      position: absolute;
+      display: block;
+      margin-left: 8px;
+    }
+  
+    .our .container .ovrly .row .col img {
+      width: 50px;
+      border-radius: 70px;
+      margin-left: 13%;
+      margin-top: 55px;
+    }
+  
+    .our .container .ovrly .row .col h1 {
+      color: white;
+      left: 130px;
+      top: 210px;
+      font-weight: lighter;
+      font-size: 11px;
+    }
+  
+    .our .container .ovrly .row .col p {
+      color: white;
+      width: 250px;
+      left: 120px;
+      top: 220px;
+      font-weight: lighter;
+      font-size: 8px;
+    }
+  
+    .our-body .container {
+      margin-top: 100px;
+    }
+  
+    .our-body .container h2 {
+      font-size: 20px;
+    }
+  
+    .our-body .container .row div img {
+      margin-left: 15px;
+    }
+  }
+  
+  

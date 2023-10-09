@@ -24,18 +24,64 @@
   <!-- Vendor CSS Files -->
   <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
   <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 
   <!-- Template Main CSS File -->
+  <link href="../static/aboutus.css" rel="stylesheet">
   <link href="../static/style.css" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+  <script>
+    $(document).ready(function () {
+      listing();
+    });
+
+
+    function listing() {
+      $.ajax({
+        type: 'GET',
+        url: '/upload?sample_give=hello',
+        data: {},
+        success: function (response) {
+          let articles = response["articles"];
+          for (let i = 0; i < articles.length; i++) {
+            let title = articles[i]["title"];
+            let content = articles[i]["content"];
+            let file = articles[i]['file'];
+            let temp_html = `
+        <div class="col-4">
+          <div class="card">
+            <img
+              src="../${file}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">${title}</h5>
+              <p class="card-text">${content}</p>
+              <h6 class="card-subtitle mb-2 text-muted">2022.02.14</h6>
+            </div>
+          </div>
+        </div>
+        `;
+            $("#cards-box").append(temp_html);
+          }
+        }
+      })
+
+    }
+
+  </script>
+
 </head>
+
 
 <body>
 
@@ -82,16 +128,19 @@
           <hr size="10px" width="50%" align="right" class="garis">
         </center>
         <div class="head-abt">
-          <div class="row" >
+          <div class="row">
             <div class="col-md-auto">
               <div class="img1">
-                <img src="../static/assets/Assets/asset aboutUs/a2.png" alt="" class="img-fluid animate__animated animate__fadeInLeftBig animate__delay-1s">
+                <img src="../static/assets/Assets/asset aboutUs/a2.png" alt=""
+                  class="img-fluid animate__animated animate__fadeInLeftBig animate__delay-1s">
               </div>
               <div class="img2">
-                <img src="../static/assets/Assets/asset aboutUs/a1.jpeg" alt="" class="img-fluid animate__animated animate__fadeInUpBig animate__delay-2s">
+                <img src="../static/assets/Assets/asset aboutUs/a1.jpeg" alt=""
+                  class="img-fluid animate__animated animate__fadeInUpBig animate__delay-2s">
               </div>
               <div class="img3">
-                <img src="../static/assets/Assets/asset aboutUs/a3.png" alt="" class="img-fluid animate__animated animate__fadeInRightBig animate__delay-1s">
+                <img src="../static/assets/Assets/asset aboutUs/a3.png" alt=""
+                  class="img-fluid animate__animated animate__fadeInRightBig animate__delay-1s">
               </div>
             </div>
           </div>
@@ -103,7 +152,7 @@
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
         <center style="margin-top: 150px;">
-          <h2 class="fw-bold animate__animated animate__fadeInDownBig " >Know Us Better</h2>
+          <h2 class="fw-bold animate__animated animate__fadeInDownBig ">Know Us Better</h2>
           <hr size="10px" width="50%" align="right" class="garis">
         </center>
         <div class="row">
@@ -138,8 +187,8 @@
       <div class="container " data-aos="fade-up">
         <h2>Connect With Us <button>Learn More</button></h2>
         <h5>To find out more about our company, you can find out more about our company</h5>
-       
-       <br> <swiper-container class="mySwiper" init="false">
+
+        <br> <swiper-container class="mySwiper" init="false">
           <swiper-slide>
             <div class="card-body">
               <i class="fa-solid fa-phone fa-shake" style="color: #121212;"></i>
@@ -191,75 +240,10 @@
             <hr size="10px" width="50%" align="right" class="garis">
           </center>
         </header>
-        <!-- Gallery -->
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <a href="/24hours">
-              <div class="act">
-                <img src="../static/assets/Assets/1/24hrs1.jpg" class="w-100 shadow-1-strong rounded mb-4" />
-                <div class="ovr1">
-                  <div class="capt1">| 24 Hours Operational Team</div>
-                </div>
-              </div>
-            </a>
 
-
-            <a href="/scada">
-              <div class="act">
-                <img src="../static/assets/Assets/1/scd2.jpg" class="w-100 shadow-1-strong rounded mb-4" />
-                <div class="ovr1">
-                  <div class="capt1">| SCADA - Software Automation</div>
-                </div>
-              </div>
-            </a>
-
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <a href="/environment">
-              <div class="act">
-                <img src="../static/assets/Assets/1/env2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-                <div class="ovr1">
-                  <div class="capt1">| Environmentally Sustainable</div>
-                </div>
-              </div>
-            </a>
-
-<br>
-            <a href="fasttrans">
-              <div class="act">
-                <img src="../static/assets/Assets/1/fst1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-                <div class="ovr1">
-                  <div class="capt1">| Fast Transmision</div>
-                </div>
-              </div>
-            </a>
-
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <a href="/advanced">
-              <div class="act">
-                <img src="../static/assets/Assets/1/adv1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-                <div class="ovr1">
-                  <div class="capt1">| Advanced Technology</div>
-                </div>
-              </div>
-            </a>
-
-
-            <a href="constructive">
-              <div class="act">
-                <img src="../static/assets/Assets/1/cons1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-                <div class="ovr1">
-                  <div class="capt1">| Constructive Cooperation</div>
-                </div>
-              </div>
-            </a>
-
-          </div>
+        <div class="row justify-content-start" id="cards-box">
         </div>
-        <!-- Gallery -->
+
 
       </div>
     </section>
