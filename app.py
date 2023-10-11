@@ -62,7 +62,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))
 
 @app.route('/24hours')
 def hours():
@@ -117,7 +117,7 @@ def save_data():
     }
     db.binsar.insert_one(doc)
     return jsonify({
-        'msg':'your data has been saved 22!'
+        'msg':'your data has been upload!'
     })
 
     
@@ -131,20 +131,6 @@ def data():
 def add():
     return render_template('add.html')
 
-@app.route('/add',methods=['GET'])
-def submit():
-    act=request.form.get('act')
-    img=request.form.get('img')
-    capt=request.form.get('capt')
-    doc={
-        'act':act,
-        'img':img,
-        'capt':capt,
-    }
-      
-    db.binsar.insert_one(doc)
-    return jsonify({
-        'msg':'your data has been saved!'
-    })
+
 if __name__=='__main__':
     app.run('0.0.0.0',port=5000, debug=True)
