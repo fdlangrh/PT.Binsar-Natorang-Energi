@@ -1233,3 +1233,136 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+.dashboard {
+  background: #f6f9ff;
+  width: 969px;
+  height: 732px;
+  position: relative;
+  overflow: hidden;
+}
+.border1 {
+  background: #ffffff;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #3c6255;
+  border-width: 1px;
+  width: 260px;
+  height: 327px;
+  position: absolute;
+  left: 22px;
+  top: 23px;
+}
+.text1 {
+  position: absolute;
+  inset: 0;
+}
+.users {
+  color: #3c6255;
+  text-align: center;
+  font: 600 25px "Poppins", sans-serif;
+  position: absolute;
+  left: -65px;
+  top: 302px;
+  width: 441.48px;
+  height: 75.11px;
+}
+.border2 {
+  background: #244e40;
+  border-radius: 30px;
+  width: 650px;
+  height: 681px;
+  position: absolute;
+  left: 306px;
+  top: 23px;
+}
+.group1 {
+  position: absolute;
+  inset: 0;
+}
+.pt-binsar-natorang-energi {
+  color: #ffffff;
+  text-align: center;
+  font: 600 25px "Poppins", sans-serif;
+  position: absolute;
+  left: 203px;
+  top: 541px;
+  width: 826.25px;
+  height: 93.89px;
+}
+.image1 {
+  width: 453px;
+  height: 364px;
+  position: absolute;
+  left: 400px;
+  top: 148px;
+}
+.image3 {
+  width: 186px;
+  height: 164px;
+  position: absolute;
+  left: 59px;
+  top: 46px;
+}
+.garis1 {
+  background: #3c6255;
+  width: 260px;
+  height: 70px;
+  position: absolute;
+  left: 22px;
+  top: 225px;
+}
+.border3 {
+  background: #ffffff;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #3c6255;
+  border-width: 1px;
+  width: 260px;
+  height: 327px;
+  position: absolute;
+  left: 22px;
+  top: 377px;
+}
+.garis2 {
+  background: #3c6255;
+  width: 260px;
+  height: 70px;
+  position: absolute;
+  left: 22px;
+  top: 579px;
+}
+.text2 {
+  color: #ffffff;
+  text-align: center;
+  font: 600 30px "Poppins", sans-serif;
+  position: absolute;
+  left: -27px;
+  top: calc(50% - 129px);
+  width: 358px;
+}
+.text3 {
+  color: #ffffff;
+  text-align: center;
+  font: 600 30px "Poppins", sans-serif;
+  position: absolute;
+  left: -27px;
+  top: calc(50% - -222px);
+  width: 358px;
+}
+.activity {
+  color: #3c6255;
+  text-align: center;
+  font: 600 25px "Poppins", sans-serif;
+  position: absolute;
+  left: -63px;
+  top: 657px;
+  width: 441.48px;
+  height: 75.11px;
+}
+.image2 {
+  width: 236px;
+  height: 187px;
+  position: absolute;
+  left: 34px;
+  top: 384px;
+}
