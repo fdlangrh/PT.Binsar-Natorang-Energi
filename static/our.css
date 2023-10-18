@@ -11,16 +11,17 @@
   .our .container .ovrly .row .col img {
     width: 150px;
     border-radius: 50px;
-    margin-left: 13%;
-    margin-top: 170px;
+    margin-left: 9%;
+    margin-top: 120px;
   }
   
   .our .container .ovrly .row .col h1 {
     color: white;
     font-size: 30px;
-    left: 400px;
+    left: 430px;
     top: 300px;
     font-weight: bolder;
+  
   }
   
   .our .container .ovrly .row .col p {
@@ -90,5 +91,16 @@
       margin-left: 15px;
     }
   }
-  
+  .image1{
+    width: 420px;
+    height: 200px;
+    margin: 10px 10px 10px 150px;
+    border-radius: 20px;
+  }
+  .image2 {
+    width: 500px;
+    height: 638px;
+    margin: 20px ;
+    border-radius: 20px;
+  }
   
