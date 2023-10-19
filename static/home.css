@@ -208,8 +208,8 @@
     }
 }
 .border {
-  
-  width: 100%;
+  background: #dbdbdb; 
+  width: 1363px;
   height: 318px;
   position: relative;
   overflow: hidden;
