@@ -3,10 +3,13 @@ from pymongo import MongoClient
 import requests
 from datetime import datetime
 from bson import ObjectId
+import os 
+from os.path import join, dirname
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
-client=MongoClient('mongodb+srv://fadil123:fadil123@atlascluster.jbkflub.mongodb.net/?retryWrites=true&w=majority')
+uri = "mongodb+srv://fadil123:fadil123@atlascluster.jbkflub.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri)
 db=client.pkl2
 
 
@@ -16,7 +19,9 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('aboutus.html')
+    data = db.binsar.find({})
+    file = request.args.get('file')
+    return render_template('aboutus.html', data=data, file = file)
 
 @app.route('/social')
 def social():
@@ -25,6 +30,30 @@ def social():
 @app.route('/our')
 def our():
     return render_template('OurPartners.html')
+
+@app.route('/24hours')
+def hours():
+    return render_template('24hours.html')
+
+@app.route('/scada')
+def scada():
+    return render_template('scada.html')
+
+@app.route('/advanced')
+def advanced():
+    return render_template('advanced.html')
+
+@app.route('/environment')
+def environment():
+    return render_template('environment.html')
+
+@app.route('/fasttrans')
+def fasttrans():
+    return render_template('fasttrans.html')
+
+@app.route('/constructive')
+def cons():
+    return render_template('constructive.html')
 
 @app.route('/dashboard')
 def dashboard():
@@ -64,52 +93,119 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('home'))
 
-@app.route('/24hours')
-def hours():
-    return render_template('24hours.html')
-
-@app.route('/scada')
-def scada():
-    return render_template('scada.html')
-
-@app.route('/advanced')
-def advanced():
-    return render_template('advanced.html')
-
-@app.route('/environment')
-def environment():
-    return render_template('environment.html')
-
-@app.route('/fasttrans')
-def fasttrans():
-    return render_template('fasttrans.html')
-
-@app.route('/constructive')
-def cons():
-    return render_template('constructive.html')
 
 
+@app.route('/data')
+def data():
+    data = db.binsar.find({})
+    return render_template('data.html', data=data)
 
-@app.route('/upload', methods=['GET'])
-def upload():
-   articles = list(db.binsar.find({}, {'_id':False}))
-   return jsonify({'articles': articles})
-  
+@app.route('/add')
+def add():
+    return render_template('add.html')
+
+@app.route('/edit')
+def edit():
+    id = request.args.get('_id')
+    data=list(db.binsar.find({'_id' : ObjectId(id)}))
+    print(data)
+
+    return render_template('edit.html', data = data)
+
+# @app.route('/edit', methods=['POST'])
+# def ubah(num):
+#     title = request.form['title_give']
+#     content = request.form['content_give']
+#     id = request.form['id_give']
+    
+#     if "file_give" in request.files:
+#             new_image = request.files['file_give']
+
+#             old_post = db.binsar.find_one({'num': num})
+#             old_image_path = old_post.get('file')
+
+#             if new_image:
+#                 # Lakukan penyimpanan file gambar yang baru
+#                 extension = new_image.filename.split(
+#                     '.')[-1]  # Ambil ekstensi dengan benar
+#                 filename = f'static/add-{num}/{title}.{extension}'
+#                 new_image.save(filename)
+
+#                 new_image_path = f'img/detail-{num}/{title}.{extension}'
+#                 db.product.update_one({'num': num}, {
+#                                       '$set': {'title': title, 'content': content, 'file': new_image_path}})
+#             if old_image_path:
+#                     old_image_file = os.path.join('static', old_image_path)
+#                     if os.path.exists(old_image_file):
+#                         os.remove(old_image_file)
+            
+#             return jsonify({'result': 'success', 'msg': 'Data telah diperbarui'})
+#     doc = {
+#         'title':title,
+#         'content':content,
+#         'file':filename
+#     }
+#     db.binsar.update_one({'_id':ObjectId(id)},{'$set':doc})
+#     return jsonify({
+#         'msg':'hore data berhasil diubah'
+#     })
+
+
+@app.route('/data/edit/<int:num>', methods=['POST'])
+def save(num):
+
+        title = request.form.get('title')
+        content = request.form.get('content')
+
+        if "file_give" in request.files:
+            new_image = request.files['file_give']
+
+            old_post = db.binsar.find_one({'num': num})
+            old_image_path = old_post.get('file')
+
+            if new_image:
+                # Lakukan penyimpanan file gambar yang baru
+                extension = new_image.filename.split(
+                    '.')[-1]  # Ambil ekstensi dengan benar
+                filename = f'static/add-{num}/{title}.{extension}'
+                new_image.save(filename)
+
+                new_image_path = f'static/add-{num}/{title}.{extension}'
+                db.binsar.update_one({'num': num}, {
+                                      '$set': {'title': title, 'content': content, 'file': new_image_path}})
+
+                # Hapus gambar yang lama
+                if old_image_path:
+                    old_image_file = os.path.join('static', old_image_path)
+                    if os.path.exists(old_image_file):
+                        os.remove(old_image_file)
+
+        else:
+            # Jika tidak ada file yang diunggah, tetap perbarui title dan layout
+            db.binsar.update_one(
+                {'num': num}, {'$set': {'title': title, 'content': content,}})
+
+        return jsonify({'result': 'success', 'msg': 'Your Data Has Been Updated'})
+
+@app.route('/upload_show', methods=['GET'])
+def show_data():
+    articles = list(db.binsar.find({},{'_id':False}))
+    return jsonify({'articles': articles})
 
 @app.route('/upload', methods=['POST'])
 def save_data():
-#    sample_data=request.form.get('sample_give')
-#    print(sample_data)
-    title_receive=request.form.get('title_give')
-    content_receive=request.form.get('content_give')
-
-    file = request.files["file_give"]
+    file = request.files['file_give']
     extension = file.filename.split('.')[-1]
     today = datetime.now()
     mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
-    filename = f'static/post-{mytime}.{extension}'
-    file.save(filename)
+    filename = f'file-{mytime}.{extension}'
+    save_to = f'../PT.Binsar-Natorang-Energi/static/{filename}'
+    file.save(save_to)
 
+    today = datetime.now()
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+    title_receive = request.form.get('title_give')
+    content_receive = request.form.get('content_give')
     doc = {
         'file': filename,
         'title': title_receive,
@@ -117,19 +213,72 @@ def save_data():
     }
     db.binsar.insert_one(doc)
     return jsonify({
-        'msg':'your data has been upload!'
-    })
-
+        'msg': 'data was saved!'})
     
 
+@app.route('/edit', methods=['GET'])
+def edit_show():
+    id = request.args.get('_id')
+    data=list(db.binsar.find({'_id' : ObjectId(id)}))
+    print(data)
+    return render_template('edit.html', data = data)
 
-@app.route('/data')
-def data():
-    return render_template('data.html')
 
-@app.route('/add')
-def add():
-    return render_template('add.html')
+@app.route('/edit/update/<int:num>', methods=['GET'])
+def edit(num):
+        title = request.form.get('title')
+        content = request.form.get('content')
+        id = request.args.get('_id')
+
+
+        if "file_give" in request.files:
+            new_image = request.files['file_give']
+
+            old_post = db.binsar.find_one({'num': num})
+            old_image_path = old_post.get('file')
+
+        if new_image:
+                # Lakukan penyimpanan file gambar yang baru
+                extension = new_image.filename.split('.')[-1]  # Ambil ekstensi dengan benar
+                filename = f'static/add-{num}/{title}.{extension}'
+                new_image.save(filename)
+
+                new_image_path = f'img/detail-{num}/{title}.{extension}'
+                db.binsar.update_one({'num': num},({'_id' : ObjectId(id)}), {
+                                      '$set': {'title': title, 'content': content, 'file': new_image_path}})
+
+                # Hapus gambar yang lama
+                if old_image_path:
+                    old_image_file = os.path.join('static', old_image_path)
+                    if os.path.exists(old_image_file):
+                        os.remove(old_image_file)
+        else:
+            # Jika tidak ada file yang diunggah, tetap perbarui title dan content
+            db.binsar.update_one({'_id':ObjectId(id)},{'num': num}, {'$set': {'title': title, 'content': content}})
+        return jsonify({'result': 'success', 'msg': 'Data Has Been Updated!'})
+
+@app.route('/adminpanel/get-posting/<int:num>', methods=['GET'])
+def get_post(num):
+
+        post = db.binsar.find_one({'num': num}, {'_id': id})
+
+        if save_data:
+            return jsonify({'result': 'success', 'post': post})
+        else:
+            return jsonify({'result': 'error', 'msg': 'Posting tidak ditemukan'}), 404
+
+       
+
+@app.route('/delete', methods=['GET'])
+def delete():
+    id = request.args.get('_id')
+
+    db.binsar.delete_one({'_id':ObjectId(id)})
+    data = list(db.binsar.find({}))
+    return jsonify({
+        'msg':'hore data berhasil diubah'
+    })
+
 
 
 if __name__=='__main__':

@@ -108,6 +108,10 @@
     border-radius: 30px;
   }
   
+  .index-end{
+    margin-top: -50px;
+  }
+  
   .index-end .container swiper-container {
     width: 100%;
     height: 120%;
@@ -204,8 +208,8 @@
     }
 }
 .border {
-  background: #dbdbdb;
-  width: 1363px;
+  
+  width: 100%;
   height: 318px;
   position: relative;
   overflow: hidden;
@@ -219,10 +223,11 @@
   border-style: solid;
   border-color: #3c6255;
   border-width: 1px;
-  width: 302px;
+  width: 270px;
   height: 142px;
   position: absolute;
-  left: 46px;
+  border-radius: 10px;
+  left: 40px;
   top: 140px;
 }
 .group2 {
@@ -234,10 +239,11 @@
   border-style: solid;
   border-color: #3c6255;
   border-width: 1px;
-  width: 302px;
+  width: 270px;
   height: 142px;
+  border-radius: 10px;
   position: absolute;
-  left: 691px;
+  left: 660px;
   top: 140px;
 }
 .group3 {
@@ -249,10 +255,11 @@
   border-style: solid;
   border-color: #3c6255;
   border-width: 1px;
-  width: 302px;
+  width: 270px;
+  border-radius: 10px;
   height: 142px;
   position: absolute;
-  left: 1013px;
+  left: 965px;
   top: 140px;
 }
 .group4 {
@@ -264,38 +271,39 @@
   border-style: solid;
   border-color: #3c6255;
   border-width: 1px;
-  width: 302px;
+  width: 270px;
+  border-radius: 10px;
   height: 142px;
   position: absolute;
-  left: 367px;
+  left: 350px;
   top: 140px;
 }
 .icon-1 {
   width: 45px;
   height: 45px;
   position: absolute;
-  left: 86px;
+  left: 55px;
   top: 189px;
 }
 .icon-2 {
   width: 46px;
   height: 46px;
   position: absolute;
-  left: 414px;
+  left: 380px;
   top: 184px;
 }
 .icon-3 {
   width: 70px;
   height: 58px;
   position: absolute;
-  left: 729px;
+  left: 659px;
   top: 178px;
 }
 .icon-4 {
   width: 83px;
   height: 67px;
   position: absolute;
-  left: 1032px;
+  left: 952px;
   top: 183px;
 }
 .asset {
@@ -303,7 +311,7 @@
   text-align: left;
   font: 600 30px/161% "Poppins", sans-serif;
   position: absolute;
-  left: 145px;
+  left: 110px;
   top: 160px;
   width: 128.99px;
   height: 29.59px;
@@ -313,7 +321,7 @@
   text-align: left;
   font: 600 16px "Poppins", sans-serif;
   position: absolute;
-  left: 145px;
+  left: 115px;
   top: 204.59px;
   width: 199px;
   height: 34px;
@@ -323,7 +331,7 @@
   text-align: left;
   font: 600 30px/161% "Poppins", sans-serif;
   position: absolute;
-  left: 471px;
+  left: 441px;
   top: 169px;
   width: 180px;
   height: 30px;
@@ -333,7 +341,7 @@
   text-align: left;
   font: 600 16px "Poppins", sans-serif;
   position: absolute;
-  left: 471px;
+  left: 448px;
   top: 213.59px;
   width: 199px;
   height: 34px;
@@ -343,7 +351,7 @@
   text-align: left;
   font: 600 30px/161% "Poppins", sans-serif;
   position: absolute;
-  left: 817px;
+  left: 757px;
   top: 171px;
   width: 180px;
   height: 30px;
@@ -353,7 +361,7 @@
   text-align: left;
   font: 600 16px "Poppins", sans-serif;
   position: absolute;
-  left: 817px;
+  left: 767px;
   top: 215.59px;
   width: 199px;
   height: 34px;
@@ -363,7 +371,7 @@
   text-align: left;
   font: 600 30px/161% "Poppins", sans-serif;
   position: absolute;
-  left: 1110px;
+  left: 1035px;
   top: 169px;
   width: 180px;
   height: 30px;
@@ -373,7 +381,7 @@
   text-align: left;
   font: 600 16px "Poppins", sans-serif;
   position: absolute;
-  left: 1111px;
+  left: 1040px;
   top: 212.59px;
   width: 199px;
   height: 34px;
