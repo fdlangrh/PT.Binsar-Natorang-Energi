@@ -27,41 +27,11 @@ function posting() {
         success: function (response) {
             console.log(response);
             alert(response.msg)
-            window.location.reload();
+            window.location.href = '/data'
         },
     });
 }
 
-// function edit() {
-//   let title = $("#input-title-edit").val();
-//   let newImage = $("#input-file-edit")[0].files[0];
-//   let layout = $("#layout-select-edit").val();
-
-//   let formData = new FormData();
-//   formData.append("title", title);
-//   formData.append("layout", layout);
-
-//   if (newImage) {
-//     formData.append("file_give", newImage);
-//   }
-
-
-//   $.ajax({
-//       type:'POST',
-//       url:'/edit',
-//       data:{
-//           title_give:title,
-//           content_give:content,
-//           file_give:newImage,
-//           id_give:id
-
-//       },
-//       success:function(response){
-//           alert(response.msg)
-//           window.location.href = 'data.html'
-//       }
-//   })
-// }
 
 function baru(){
         let id = $('#_id').val();
@@ -91,27 +61,6 @@ function baru(){
         });
         
 }
-
-function update(num) {
-    $.ajax({
-      type: "GET",
-      url: `/edit/update/${num}`,
-      success: function (response) {
-        if (response.result === "success") {
-          let post = response.post;
-          $("#image-title").val(post.title);
-          // $("#_id").val(post.id)
-          $("#image-description").val(post.content);
-
-          $("#edit-post-button").attr("onclick", `save(${num})`);
-          $("#exampleModal").modal("show");
-        } else {
-          alert(response.msg);
-        }
-      },
-    });
-  }
-
   function save(num) {
     let title = $("#image-title").val();
     let newImage = $("#image")[0].files[-1];
@@ -134,10 +83,10 @@ function update(num) {
       contentType: false,
       processData: false,
       success: function (response) {
-        if (response.result === "success") {
-          window.location.href = '/data'
+        if (response.result === "success") { 
         } else {
           alert(response.msg);
+          window.location.href = '/data'
         }
       },
     });

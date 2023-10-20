@@ -104,51 +104,6 @@ def data():
 def add():
     return render_template('add.html')
 
-# @app.route('/edit')
-# def edit():
-#     id = request.args.get('_id')
-#     data=list(db.binsar.find({'_id' : ObjectId(id)}))
-#     print(data)
-
-#     return render_template('edit.html', data = data)
-
-# @app.route('/edit', methods=['POST'])
-# def ubah(num):
-#     title = request.form['title_give']
-#     content = request.form['content_give']
-#     id = request.form['id_give']
-    
-#     if "file_give" in request.files:
-#             new_image = request.files['file_give']
-
-#             old_post = db.binsar.find_one({'num': num})
-#             old_image_path = old_post.get('file')
-
-#             if new_image:
-#                 # Lakukan penyimpanan file gambar yang baru
-#                 extension = new_image.filename.split(
-#                     '.')[-1]  # Ambil ekstensi dengan benar
-#                 filename = f'static/add-{num}/{title}.{extension}'
-#                 new_image.save(filename)
-
-#                 new_image_path = f'img/detail-{num}/{title}.{extension}'
-#                 db.product.update_one({'num': num}, {
-#                                       '$set': {'title': title, 'content': content, 'file': new_image_path}})
-#             if old_image_path:
-#                     old_image_file = os.path.join('static', old_image_path)
-#                     if os.path.exists(old_image_file):
-#                         os.remove(old_image_file)
-            
-#             return jsonify({'result': 'success', 'msg': 'Data telah diperbarui'})
-#     doc = {
-#         'title':title,
-#         'content':content,
-#         'file':filename
-#     }
-#     db.binsar.update_one({'_id':ObjectId(id)},{'$set':doc})
-#     return jsonify({
-#         'msg':'hore data berhasil diubah'
-#     })
 
 @app.route('/baru', methods=['POST'])
 def baru():
@@ -220,28 +175,15 @@ def update(num):
             return jsonify({'result': 'success', 'post': post})
     else:
             return jsonify({'result': 'error', 'msg': 'Posting tidak ditemukan'}), 404
-
-
-
-# @app.route('/adminpanel/get-posting/<int:num>', methods=['GET'])
-# def get_post(num):
-
-#         post = db.binsar.find_one({'num': num}, {'_id': id})
-
-#         if save_data:
-#             return jsonify({'result': 'success', 'post': post})
-#         else:
-#             return jsonify({'result': 'error', 'msg': 'Posting tidak ditemukan'}), 404
-
        
 
 @app.route('/delete', methods=['GET'])
 def delete():
     id = request.args.get('_id')
-
     db.binsar.delete_one({'_id':ObjectId(id)})
     data = list(db.binsar.find({}))
-    return jsonify({'alert''msg':'hore data berhasil diubah'})
+    return jsonify({'msg':'Your Data Has Been Deleted!'})
+
 
 
 

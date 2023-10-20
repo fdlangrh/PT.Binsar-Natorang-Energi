@@ -209,7 +209,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <img src="../static/prof.jpeg" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">Binsar Natorang</span>
                     </a><!-- End Profile Iamge Icon -->
 
@@ -344,14 +344,8 @@
                                 <td id="image-description">{{content}}</td>
 
                                 <td class="text-center">
-
-                                    <!-- Button trigger modal -->
-                                    <!-- <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal" id="edit-modal"  onclick="update()">
+                                    <a href="/edit?_id={{_id}}">
                                         <img src="https://img.icons8.com/plumpy/26/000000/edit-calendar.png" />
-                                    </button> -->
-                        <a href="/edit?_id={{_id}}">
-                                     <img src="https://img.icons8.com/plumpy/26/000000/edit-calendar.png" />
                                     </a>
 
                                     |
@@ -416,15 +410,14 @@
                                 <div class="table-responsive">
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Image</label>
-                                        <input type="hidden"  id="_id">
-                                        <input type="file" class="form-control" id="image" 
-                                            name="image" style="border-radius: 13px;" required />
+                                        <input type="hidden" id="_id">
+                                        <input type="file" class="form-control" id="image" name="image"
+                                            style="border-radius: 13px;" required />
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Image Title</label>
-                                        <input type="text" class="form-control" id="image-title"
-                                             name="image-title" style="border-radius: 13px;"
-                                            required />
+                                        <input type="text" class="form-control" id="image-title" name="image-title"
+                                            style="border-radius: 13px;" required />
                                     </div>
 
                                     <div class="mb-3">
@@ -438,7 +431,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary"  onclick="save()"  id="edit-post-button">Save changes</button>
+                        <button type="submit" class="btn btn-primary" onclick="save()" id="edit-post-button">Save
+                            changes</button>
                     </div>
                 </div>
             </div>

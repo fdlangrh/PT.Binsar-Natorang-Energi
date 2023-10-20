@@ -202,14 +202,14 @@
         </header>
 
         <div class="row justify-content-start">
-          {% for def in data %} {% set title = def.title %} {% set content = def.content %} {% set file = def.file %}
-
+          {% for def in data %} {% set title = def.title %} {% set content = def.content %} {% set
+            file = def.file %} {% set _id = def._id %}
           <div class="col-4">
               <div class="card">
                   {% if not file %}
                   <img src="../static/default-image.jpg" class="card-img-top" alt="..." />
                   {% else %}
-                  <img src="../static/{{file}}" class="card-img-top" alt="..." />
+                  <img src="../static/add/{{file}}" class="card-img-top" alt="..."  width="200px" height="250px"/>
                   {% endif %}
 
                   <div class="card-body">
