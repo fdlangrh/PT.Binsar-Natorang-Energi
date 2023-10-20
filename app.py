@@ -104,13 +104,13 @@ def data():
 def add():
     return render_template('add.html')
 
-@app.route('/edit')
-def edit():
-    id = request.args.get('_id')
-    data=list(db.binsar.find({'_id' : ObjectId(id)}))
-    print(data)
+# @app.route('/edit')
+# def edit():
+#     id = request.args.get('_id')
+#     data=list(db.binsar.find({'_id' : ObjectId(id)}))
+#     print(data)
 
-    return render_template('edit.html', data = data)
+#     return render_template('edit.html', data = data)
 
 # @app.route('/edit', methods=['POST'])
 # def ubah(num):
@@ -150,42 +150,29 @@ def edit():
 #         'msg':'hore data berhasil diubah'
 #     })
 
-
-@app.route('/data/edit/<int:num>', methods=['POST'])
-def save(num):
-
-        title = request.form.get('title')
-        content = request.form.get('content')
-
-        if "file_give" in request.files:
-            new_image = request.files['file_give']
-
-            old_post = db.binsar.find_one({'num': num})
-            old_image_path = old_post.get('file')
-
-            if new_image:
-                # Lakukan penyimpanan file gambar yang baru
-                extension = new_image.filename.split(
-                    '.')[-1]  # Ambil ekstensi dengan benar
-                filename = f'static/add-{num}/{title}.{extension}'
-                new_image.save(filename)
-
-                new_image_path = f'static/add-{num}/{title}.{extension}'
-                db.binsar.update_one({'num': num}, {
-                                      '$set': {'title': title, 'content': content, 'file': new_image_path}})
-
-                # Hapus gambar yang lama
-                if old_image_path:
-                    old_image_file = os.path.join('static', old_image_path)
-                    if os.path.exists(old_image_file):
-                        os.remove(old_image_file)
-
-        else:
-            # Jika tidak ada file yang diunggah, tetap perbarui title dan layout
-            db.binsar.update_one(
-                {'num': num}, {'$set': {'title': title, 'content': content,}})
-
-        return jsonify({'result': 'success', 'msg': 'Your Data Has Been Updated'})
+@app.route('/baru', methods=['POST'])
+def baru():
+    id = request.form.get("id_give")
+    file = request.files['file_give']
+    extension = file.filename.split('.')[-1]
+    today = datetime.now()
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+    filename = f'file-{mytime}.{extension}'
+    save_to = f'../PT.Binsar-Natorang-Energi/static/add/{filename}'
+    file.save(save_to)          
+    title_receive = request.form.get('title_give')
+    content_receive = request.form.get('content_give')
+    doc = {
+        'file': filename,
+        'id': id,
+        'title': title_receive,
+        'content': content_receive
+    }
+    db.binsar.update_one(
+    {'_id':ObjectId(id)},{'$set':doc})
+    return jsonify({
+        'msg':'Your Data Has Been Updated'
+    })
 
 @app.route('/upload_show', methods=['GET'])
 def show_data():
@@ -199,7 +186,7 @@ def save_data():
     today = datetime.now()
     mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
     filename = f'file-{mytime}.{extension}'
-    save_to = f'../PT.Binsar-Natorang-Energi/static/{filename}'
+    save_to = f'../PT.Binsar-Natorang-Energi/static/add/{filename}'
     file.save(save_to)
 
     today = datetime.now()
@@ -213,7 +200,8 @@ def save_data():
     }
     db.binsar.insert_one(doc)
     return jsonify({
-        'msg': 'data was saved!'})
+        'msg':'Your Data Has Been added'
+    })
     
 
 @app.route('/edit', methods=['GET'])
@@ -225,47 +213,25 @@ def edit_show():
 
 
 @app.route('/edit/update/<int:num>', methods=['GET'])
-def edit(num):
-        title = request.form.get('title')
-        content = request.form.get('content')
-        id = request.args.get('_id')
+def update(num):
+    post = db.binsar.find_one({'_id': num}, {'_id': False})
 
-
-        if "file_give" in request.files:
-            new_image = request.files['file_give']
-
-            old_post = db.binsar.find_one({'num': num})
-            old_image_path = old_post.get('file')
-
-        if new_image:
-                # Lakukan penyimpanan file gambar yang baru
-                extension = new_image.filename.split('.')[-1]  # Ambil ekstensi dengan benar
-                filename = f'static/add-{num}/{title}.{extension}'
-                new_image.save(filename)
-
-                new_image_path = f'img/detail-{num}/{title}.{extension}'
-                db.binsar.update_one({'num': num},({'_id' : ObjectId(id)}), {
-                                      '$set': {'title': title, 'content': content, 'file': new_image_path}})
-
-                # Hapus gambar yang lama
-                if old_image_path:
-                    old_image_file = os.path.join('static', old_image_path)
-                    if os.path.exists(old_image_file):
-                        os.remove(old_image_file)
-        else:
-            # Jika tidak ada file yang diunggah, tetap perbarui title dan content
-            db.binsar.update_one({'_id':ObjectId(id)},{'num': num}, {'$set': {'title': title, 'content': content}})
-        return jsonify({'result': 'success', 'msg': 'Data Has Been Updated!'})
-
-@app.route('/adminpanel/get-posting/<int:num>', methods=['GET'])
-def get_post(num):
-
-        post = db.binsar.find_one({'num': num}, {'_id': id})
-
-        if save_data:
+    if save_data:
             return jsonify({'result': 'success', 'post': post})
-        else:
+    else:
             return jsonify({'result': 'error', 'msg': 'Posting tidak ditemukan'}), 404
+
+
+
+# @app.route('/adminpanel/get-posting/<int:num>', methods=['GET'])
+# def get_post(num):
+
+#         post = db.binsar.find_one({'num': num}, {'_id': id})
+
+#         if save_data:
+#             return jsonify({'result': 'success', 'post': post})
+#         else:
+#             return jsonify({'result': 'error', 'msg': 'Posting tidak ditemukan'}), 404
 
        
 
@@ -275,9 +241,7 @@ def delete():
 
     db.binsar.delete_one({'_id':ObjectId(id)})
     data = list(db.binsar.find({}))
-    return jsonify({
-        'msg':'hore data berhasil diubah'
-    })
+    return jsonify({'alert''msg':'hore data berhasil diubah'})
 
 
 

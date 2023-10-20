@@ -63,7 +63,34 @@ function posting() {
 //   })
 // }
 
+function baru(){
+        let id = $('#_id').val();
+       
+        let title = $("#image-title").val();
+        let content = $("#image-description").val();
+        let file = $("#image").prop("files")[0];
 
+
+        let form_data = new FormData();
+
+    form_data.append("file_give", file);
+    form_data.append("title_give", title);
+    form_data.append("content_give", content);
+    form_data.append("id_give", id);
+
+    $.ajax({
+        type: "POST",
+        url: "/baru",
+        data: form_data,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            alert(response.msg)
+            window.location.href = '/data'  
+          },
+        });
+        
+}
 
 function update(num) {
     $.ajax({
@@ -73,10 +100,11 @@ function update(num) {
         if (response.result === "success") {
           let post = response.post;
           $("#image-title").val(post.title);
-          $("#_id").val(post.id)
+          // $("#_id").val(post.id)
           $("#image-description").val(post.content);
 
           $("#edit-post-button").attr("onclick", `save(${num})`);
+          $("#exampleModal").modal("show");
         } else {
           alert(response.msg);
         }
@@ -86,9 +114,9 @@ function update(num) {
 
   function save(num) {
     let title = $("#image-title").val();
-    let id =$("#_id").val();
-    let newImage = $("#image")[0].files[0];
+    let newImage = $("#image")[0].files[-1];
     let content = $("#image-description").val();
+    let id =$("#_id").val();
   
     let formData = new FormData();
     formData.append("_id", id);
@@ -107,7 +135,7 @@ function update(num) {
       processData: false,
       success: function (response) {
         if (response.result === "success") {
-          window.location.reload();
+          window.location.href = '/data'
         } else {
           alert(response.msg);
         }

@@ -292,29 +292,30 @@
         <div class="card border-0 shadow mb-4 ">
             <div class="card-body mt-4">
                 <div class="table-responsive">
-                    <form action="" method="post">
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Image</label>
-                            <input type="hidden" value="{{data[0]['_id']}}" id="_id">
-                            <input type="file" class="form-control" id="image" value="{{data[0]['file']}}" name="image"
-                                style="border-radius: 13px;" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Image Title</label>
-                            <input type="text" class="form-control" id="image-title" value="{{data[0]['title']}}"
-                                name="image-title" style="border-radius: 13px;" required />
-                        </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Image</label>
+                        <input type="hidden" value="{{data[0]['_id']}}" id="_id">
+                        <input type="file" class="form-control" id="image" value="{{data[0]['file']}}" name="image"
+                            style="border-radius: 13px;" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Image Title</label>
+                        <input type="text" class="form-control" id="image-title" value="{{data[0]['title']}}"
+                            name="image-title" style="border-radius: 13px;" required />
+                    </div>
 
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Image Description</label>
-                            <textarea class="form-control" id="image-description" name="image-description"
-                                style="border-radius: 13px;" required>{{data[0]['content']}}</textarea>
-                        </div>
-                        <div class="mb-3 ">
-                            <button type="submit" onclick="update(num)" id="edit-post-button" class="btn btn-success"
-                                style="margin-left: 80%;">Edit Data</button>
-                        </div>
-                    </form>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Image Description</label>
+                        <textarea class="form-control" id="image-description" name="image-description"
+                            style="border-radius: 13px;" required>{{data[0]['content']}}</textarea>
+                    </div>
+                    <div class="mb-3 ">
+                        <button type="submit" onclick="baru()" id="edit-post-button" class="btn btn-success"
+                            style="margin-left: 80%;">Edit Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
