@@ -182,7 +182,7 @@ def delete():
     id = request.args.get('_id')
     db.binsar.delete_one({'_id':ObjectId(id)})
     data = list(db.binsar.find({}))
-    return jsonify({'msg':'Your Data Has Been Deleted!'})
+    return redirect(url_for('data'))
 
 
 

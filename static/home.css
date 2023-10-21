@@ -209,7 +209,7 @@
 }
 .border {
   background: #dbdbdb; 
-  width: 1363px;
+  width: 100%;
   height: 318px;
   position: relative;
   overflow: hidden;
