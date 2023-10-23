@@ -121,7 +121,7 @@
   
     .social-con .container .ovrly .row div button {
       border-radius: 20px;
-      margin-left: 120px;
+      margin-left: 30px;
       max-width: 120px;
       -webkit-column-break-before: always;
       flex-direction: column;

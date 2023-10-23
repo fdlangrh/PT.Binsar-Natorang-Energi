@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="shorcut icon" type="x-icon" href="../static/mypicture.jpg">
+  <link rel="shorcut icon" type="x-icon" href="../static/mypicture.png">
   <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -118,7 +118,7 @@
         </center>
         <div class="row">
           <div class="col-lg-6 ">
-            <img src="../static/assets/aboutus2.jpeg" class="img-fluid" style="height: 40rem" alt="">
+            <img src="../static/assets/aboutus2.jpeg" class="img-fluid-lg" alt="">
             <p>The construction of the Hasang hydropower plant, PT. Binsar Natorang Energi follows the applicable laws
               and regulations,
               namely Law no. 32 of 2009 concerning Environmental Protection and Management, in terms of providing
@@ -181,7 +181,7 @@
             <div class="card-body">
               <i class="fa-solid fa-map-location-dot fa-shake" style="color: #090a0c;"></i>
               <p class="card-text">Our Office</p>
-              <p class="tw-light">xxxxxxxxxxxx</p>
+              <p class="tw-light">Jakarta</p>
 
             </div>
           </swiper-slide>
@@ -191,8 +191,7 @@
 
     <section id="facility" class="values">
 
-      <div class="container-fluid" data-aos="fade-up">
-
+      <div class="container" data-aos="fade-up">
         <header class="section-header">
           <center>
             <h2 class="fw-bold animate__animated animate__fadeInUpBig animate__delay-3s" style="margin-top: 10px;">
@@ -205,7 +204,7 @@
         <div class="row justify-content-start">
           {% for def in data %} {% set title = def.title %} {% set content = def.content %} {% set
             file = def.file %} {% set _id = def._id %}
-          <div class="col-4">
+          <div class="col-md-4 mt-3 mt-md-4">
               <div class="card">
                   {% if not file %}
                   <img src="../static/default-image.jpg" class="card-img-top" alt="..." />
@@ -224,9 +223,6 @@
           </div>
           {% endfor %}
       </div>
-    
-
-
       </div>
     </section>
 
